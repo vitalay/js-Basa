@@ -80,3 +80,7 @@ if (a === -8 || a === 7) {
 } else {
   console.log('Неверно')
 }
+
+const  isAdmin = true
+const isModerator = isAdmin && "fail.mpg"
+console.log(isModerator);
