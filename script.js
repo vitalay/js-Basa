@@ -57,3 +57,26 @@ if (res > houseCost) {
 } else {
   console.log(`Мы накопили: ${res} .Купить не сможем (((`)
 };
+
+
+const bmwX3Price = 100000;
+const fordFocusPrice = 10000;
+const budget = 200000;
+const message = budget > bmwX3Price && budget < fordFocusPrice ? 'BMW X3' : 'Ford Focus';
+console.log(`Я хочу купить ${ message } `);
+
+
+const admin = true;
+const user = true;
+console.log(`Правельно ${admin}`);
+console.log(`Правельно ${admin && user}`);
+console.log(`Правельно ${admin || user}`);
+console.log(`Правельно ${!admin}`);
+const user2 = false
+console.log(`вивод ответа  правда или лож ${admin && user && (!user2 || user)}`);
+const a = 7
+if (a === -8 || a === 7) {
+  console.log('Верно')
+} else {
+  console.log('Неверно')
+}
