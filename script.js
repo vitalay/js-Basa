@@ -32,3 +32,14 @@ function toPover3(num = 10, power = 4) {
   return res
 }
 console.log(toPover3());
+
+const  reg = (age) => age < 18 ? "нет" : "да"
+console.log(reg(19));
+
+function vfcz (age) {
+  if(age < 18){
+  return 'нет'
+  }
+  return "да"
+}
+console.log(vfcz(19)); 
