@@ -84,3 +84,17 @@ if (a === -8 || a === 7) {
 const  isAdmin = true
 const isModerator = isAdmin && "fail.mpg"
 console.log(isModerator);
+
+
+const baby = 900
+const isBanned = true
+const isFrist = true
+const isSeling = true
+const  BonusBalans  = 100
+
+if ((baby  + BonusBalans >= 1000 )  && isBanned && isFrist && isSeling) {
+  console.log('может купить игру ')
+} else {
+  console.log('не может купить игру')
+}
+
