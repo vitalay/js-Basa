@@ -43,3 +43,20 @@ function vfcz (age) {
   return "да"
 }
 console.log(vfcz(19)); 
+
+const KG_IN_USD = 7
+const KM_IN_USD = 5
+
+function calkulateW(present){
+  return present * KG_IN_USD
+}
+function calkulateKm(distance) {
+  return distance * KM_IN_USD
+}
+function getExchengPrais(present1, present2, distance){
+  const price1 = calkulateW(present1)
+  const price2 = calkulateW(present2)
+  const distantsPraci = calkulateKm(distance)
+  return price1 + price2 + distantsPraci
+}
+console.log(getExchengPrais(1, 5, 20 ));
