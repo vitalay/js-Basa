@@ -2,7 +2,7 @@ const rols = ['Ana', 'Vika', 'Саша']
 // console.log(rols[rols.length - 1]);
 // console.log(rols.at(0));
 
-function as (el) {
+function as(el) {
   return el * el
 }
 console.log(as(3));
@@ -17,7 +17,7 @@ console.log(rols);
 rols.shift()
 console.log(rols);
 
-const ded = ['Anaqq', 'Vikaqq', 'Сашаqqq', 'varrr'] 
+const ded = ['Anaqq', 'Vikaqq', 'Сашаqqq', 'varrr']
 const ded2 = ded.splice(2)
 console.log(ded);
 console.log(ded2);
@@ -29,7 +29,7 @@ console.log(ded4);
 
 const roles = ['user', 'admin']
 const url = 'auth/user/login';
-const res  = url.split('/');
+const res = url.split('/');
 console.log(res);
 console.log(roles.join('-'))
 console.log(roles.includes('admin'))
@@ -70,25 +70,25 @@ function Add(task) {
 
 function Remove(task) {
   const index = tasks.indexOf(task); // исправлено index0f -> indexOf
-  if (index !== -1) {
-    tasks.splice(index, 1);
-  }
-}
-
-function Prioritize(task) {
-  const index = tasks.indexOf(task); // исправлено index0f -> indexOf
   if (index === -1) {
     return;
   }
-  const oldTask = tasks[index];
-  tasks.splice(index, 1);
-  tasks.unshift(oldTask);
+  return tasks.splice(index, 1);
+}
+
+function Prioritize(task) {
+  const result = Remove(task);
+  if (!result) {
+    return;
+  
+  }
+ tasks.unshift(result[0]);
 }
 
 Add('Задача 2');
 Add('Задача 3');
 console.log(tasks); // ['Задача 1', 'Задача 2', 'Задача 3']
 
-Remove('Задача 1');
+Remove('Задача 2');
 Prioritize('Задача 3');
 console.log(tasks); // ['Задача 3', 'Задача 2']
