@@ -1,30 +1,14 @@
-// const userData = ['Антон', 18,' Москва',  3, 4, 5];
-// const [name, age, city, ...numbers] = userData;
-// console.log(name, age, city, numbers);
+const task = ["задача 1", "задача 2", "задача 3", "задача 4", "задача 5", "задача 6"]
 
+for (let i = 0; i < task.length; i++) {
+  // if (task[i] === "задача 2"){
+  //   continue;
+  // }
+  if (task[i] === "задача 4") {
+   break;
+  }
+  console.log(task[i]);
 
-// Дан произвольный url -
-//   "https://purpleschool.ru/course/javascript'
-// Нужно сделать функцию, которая выводит в консоль:
-// - Протокол
-//   (https)
-//   - Доменное имя(purpleschool.ru)
-//     - Путь внутри сайта(/course/javascript)
-
-const url = 'https://purpleschool.ru/course/javascript'
-//   urlArr = url.split('/'),
-//   protocol = urlArr[0],
-//   domainName = urlArr[1],
-//   path = urlArr[2];
-
-// console.log(protocol, domainName, path);
-
-function getUrlParts(url) {
-  const [protocol, _, host, ...path] = url.split('/');
   
-  // console.log(protocol, _, host, path); 
-  console.log(`Протокол: ${protocol.split(':')[0]}`);
-  console.log(`Доменное имя: ${host}`)
-  console.log(`Путь внутри сайта: /${path.join('/')}`);
 }
-getUrlParts(url)
+ 
