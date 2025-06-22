@@ -1,92 +1,45 @@
-// const task = ["задача 1", "задача 2", "задача 3", "задача 4", "задача 5", "задача 6"]
-
-// for (let i = 0; i < task.length; i++) {
-//   // if (task[i] === "задача 2"){
-//   //   continue;
-//   // }
-//   if (task[i] === "задача 4") {
-//    break;
-//   }
-//   console.log(task[i]);
-
-  
-// }
-// _________________________________________________________
-// Задача вывести в консоль строку "Я люблю
-// JS
-// !" из массива,
-// проходя циклом в обратном порядке, не используя метод reverse.
-// const arr = ['!', 'JS', 'люблю', 'Я'];
-
-// const arr2 = []
-// // if (arr[i] === "JS") {
-// //   break;
-// // }
-// for (let i = arr.length - 1; i >= 0; i--){
-
-//   arr2.push(arr[i])
-
-// }
-// console.log(arr2.join(" "))
-
-// console.log(arr.reverse().join());
-
-
-// for (let i = 0; i < 5; i++){
-//    for(let j = 0; j < 5; j++){
-//      console.log(j)
-//    }
-//    console.log(i)
-// }
-const tasks = [[1, "Задача 1"], [2, "Задача 2"]];
-
-for (let i = 0; i < tasks.length; i++) {
-  for (let j = 0; j < tasks[i].length; j++) {
-    console.log(tasks[i][j]);
+const operations = [1000, -700, 300, -500, 10000];
+const startingBalance = 100;
+function getBalance(arrayOfOperations, initailBalance) {
+  let balance = initailBalance;
+  for (const element of arrayOfOperations) {
+    balance += element;
   }
-}
+  return balance
+ } 
+  console.log(getBalance(operations, startingBalance));
 
-// for (let i = 1; i < 5; i++) {
-//   console.log('Вывод - ${i}');
-// }
-//   while
-
-
-const arr = [1, 4, 8, 7];
-
-// for loop with break
-for (let i = 0; i < arr.length; i++) {
-  if (arr[i] > 5) {
+  function checkOperations(arrayOfOperations, initailBalance) {
+    let balance = initailBalance;
+    let isOk = true;
+    for (const element of arrayOfOperations){
+      balance += element;
+    if (balance < 0){
+    isOk = false;
     break;
-  }
-  console.log(arr[i]);
+    }
+    }
+return isOk
+    
 }
+console.log(checkOperations(operations, startingBalance));
 
-// while loop
-let i = 0;
-while (i < arr.length && arr[i] <= 5) {
-  console.log(arr[i]);
-  i++;
+
+function avarageOperations(arrayOfOperations) {
+  let positiveCount = 0;
+  let positiveSum = 0;
+  let negativeCount = 0
+  let negativeSum = 0;
+  for (const element of arrayOfOperations) {
+    if (element > 0) {
+      positiveCount++;
+      positiveSum += element;
+    }
+      if (element < 0){
+      negativeCount++;
+      negativeSum += element;
+      }
+    }
+      return [positiveSum / positiveCount, negativeSum / negativeCount]
 }
-
-// do...while loop
-let j = 0;
-do {
-  console.log(j);
-  j++;
-} while (j < 0);
-
-
-
-const arrr = [[1, "Задача 1"], [2, "Задача 2"]];
-
-for (el of arrr[1]) {
-  
-  console.log(el);
-  
-}
-for (el in arrr[1][1]) {
-
-  console.log(el);
-
-}
+console.log(avarageOperations(operations, startingBalance));
