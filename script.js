@@ -17,8 +17,6 @@
 // !" из массива,
 // проходя циклом в обратном порядке, не используя метод reverse.
 const arr = ['!', 'JS', 'люблю', 'Я'];
- 
-const arr = ['!', 'JS','люблю', 'Я'];
 
 const arr2 = []
 // if (arr[i] === "JS") {
@@ -28,6 +26,7 @@ for (let i = arr.length - 1; i >= 0; i--){
 
   arr2.push(arr[i])
 
-   
 }
 console.log(arr2.join(" "))
+
+console.log(arr.reverse().join());
