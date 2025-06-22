@@ -75,3 +75,18 @@ do {
   console.log(j);
   j++;
 } while (j < 0);
+
+
+
+const arrr = [[1, "Задача 1"], [2, "Задача 2"]];
+
+for (el of arrr[1]) {
+  
+  console.log(el);
+  
+}
+for (el in arrr[1][1]) {
+
+  console.log(el);
+
+}
