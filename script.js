@@ -10,10 +10,10 @@ raund.forEach((raundEl, i) =>{
 
 
 const transactionInUSD = [10, -7, 50, -10, 100]
-const transactionInRUB = []
-for (const transaction of transactionInUSD) {
-  transactionInRUB.push(transaction * 60);
-}
+// const transactionInRUB = []
+// for (const transaction of transactionInUSD) {
+//   transactionInRUB.push(transaction * 60);
+// }
   // console. log(transactionInUSD);
   // console. Log(transactionInRUB);
   const transactionInRUB2 = transactionInUSD
