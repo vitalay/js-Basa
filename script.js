@@ -1,44 +1,36 @@
-const raund = [1, 4, 10, 5]
+/*
+Имеется массив изменения цен prices, где внутри 1й элемент массива является ценой в момент X,
+2й - ценой в момент Y.
+Нужно преобразовать данные в массив, где будут отображены
+только положительные изменения цен: [100, 150] [100, 150]
+*/
+// const prices = [[100, 200], [120, 100], [200, 350]];
+// const result = prices
+// .map(product => product[1] - product[0])
+// .filter(price => price > 0)
+//   console.log(result);
 
-// for (const [index, el] of raund.entries()){
-//   console.log(`raund ${index + 1} ${el}`)
+
+// const prices = [[100, 200], [120, 100], [200, 350]];
+// const result = [];
+
+// for (let i = 0; i < prices.length; i++) {
+//   const profit = prices[i][1] - prices[i][0];
+//   if (profit > 0) {
+//     result.push(profit);
+//   }
 // }
 
-raund.forEach((raundEl, i) =>{
-  console.log(`Раунд ${i + 1} : ${raundEl}`)
-})
+// console.log(result);
 
+const prices = [[100, 200], [120, 100], [200, 350]];
+const result = [];
 
-const transactionInUSD = [10, -7, 50, -10, 100]
-// const transactionInRUB = []
-// for (const transaction of transactionInUSD) {
-//   transactionInRUB.push(transaction * 60);
-// }
-  // console. log(transactionInUSD);
-  // console. Log(transactionInRUB);
-  const transactionInRUB2 = transactionInUSD
-        .map((transaction) => transaction * 60);
-  console.log(transactionInUSD);
-  console.log(transactionInRUB2); 
-
-
-const operations = [100, -20, 7, 60, -30]
-  const result = []
-for (const operation of operations) {
-  if (operation > 0){
-    result.push(operation); 
+for (const [buy, sell] of prices) {
+  const profit = sell - buy;
+  if (profit > 0) {
+    result.push(profit);
   }
 }
+
 console.log(result);
-
-
-const positiveOperations = operations.filter(operation =>{
- return operation > 0
-})
-  console.log(positiveOperations);
-const positiveRUBOperations = operations
-  .filter(operation => {
-   return operation > 0
-})
-   .map(operation => operation * 60)
-console.log(positiveRUBOperations);
