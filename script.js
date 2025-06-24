@@ -134,3 +134,13 @@ operationss.sort((a, b) => {
 }
 })
 console.log(operationss)
+
+const arrrr = [1, 2, 3, 4, 5]
+console.log(new Array(1, 2, 3, 4, 5));
+const arrrr2 = new Array(5);
+console.log(arrrr2);
+arrrr2.fill(1, 0, 3);
+arrrr2.fill(2, 3, 5);
+console.log(arrrr2);
+const arrrr3 = Array.from({ length: 5 }, (cur, i) => i + 1);
+console.log(arrrr3)
