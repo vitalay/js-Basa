@@ -23,14 +23,41 @@
 
 // console.log(result);
 
-const prices = [[100, 200], [120, 100], [200, 350]];
-const result = [];
+// const prices = [[100, 200], [120, 100], [200, 350]];
+// const result = [];
 
-for (const [buy, sell] of prices) {
-  const profit = sell - buy;
-  if (profit > 0) {
-    result.push(profit);
+// for (const [buy, sell] of prices) {
+//   const profit = sell - buy;
+//   if (profit > 0) {
+//     result.push(profit);
+//   }
+// }
+
+// console.log(result);
+
+
+
+// const operacions = [100, -20, 7, -30, 40]
+// let balans = 0
+
+// for (const operacion of operacions) {
+//     balans += operacion
+// }
+// console.log(balans)
+
+const operations = [100, -20, 7, -30, 40]
+const finalBalance = operations.reduce((acc, operation, i) => {
+console.log(`Итерация ${i}, асс: ${acc}, operation ${operation}`)
+return  acc += operation;
+},0)
+console.log(finalBalance);
+
+const minElement = operations.reduce((acc, operation)  => {
+  if (operation > acc) {
+    return acc;
+  } else {
+    return operation
   }
-}
+ } ,  0)
 
-console.log(result);
+console.log(minElement);
