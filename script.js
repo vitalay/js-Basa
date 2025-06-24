@@ -66,7 +66,7 @@ console.log(minElement);
 Найти среднее значение последовательность
 числе с помощью reduce
 */
-const arr = [2, 4, 4, 10];
+const arr = [2, 4, 7, 10];
 const avg = arr.reduce((acc, el, i) => {
 if (i != arr.length - 1) {
 return acc + el;
@@ -79,3 +79,10 @@ console.log(avg)
 
 const avgq = arr.reduce((acc, el) => acc + el, 0) / arr.length;
 console.log(avgq); // 5
+
+
+const  as = arr.find(el => el > 5) 
+const asa = arr.findIndex(el => el > 5)
+console.log(as);
+console.log(asa);
+
