@@ -106,3 +106,31 @@ const res2 = prices.flatMap(el => el.concat([1]));
 console.log(res1);
 console.log(res2);
 
+
+const users = ['Вася' ,'Маша', ' Катя', 'Аня'];
+console.log(users) ;
+users.sort();
+console.log(users);
+
+const operationss = [100, -300, -100, 50, 480]
+  console.log (operationss);
+// ‹ 0 - а, b - сохраняем порядок
+// > 0 - b, а - меняем порядок
+operationss.sort((a, b) => a - b)
+//   if (a > b) {
+//   return 1;
+//   }
+//   if (a < b){
+//     return -1;
+// }
+// })
+console.log(operationss);
+operationss.sort((a, b) => {
+  if (a < b) {
+    return 1;
+  }
+    if (a > b) {
+  return -1;
+}
+})
+console.log(operationss)
