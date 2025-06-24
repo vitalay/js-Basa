@@ -86,3 +86,16 @@ const asa = arr.findIndex(el => el > 5)
 console.log(as);
 console.log(asa);
 
+/*
+Написать функцию, которые возващает true,
+если элемент есть, и false, если нет.
+*/
+const arrr = [12, 4, 4, 10, 20]
+function some(array, element) {
+  const res = array.find(el => el === element);
+  return res == undefined ? false : true;
+}
+console.log(some(arrr, 0))
+
+console.log(arrr.some(el => el === 0))
+
