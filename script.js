@@ -11,3 +11,9 @@ const film = 'Звёздные Воины'
 console.log(film.padStart(50, '*'))
 console.log(film.padEnd(50, '*'))
 console.log(film.repeat(10))
+
+
+  /* Замаскировать всё, кроме последних 4х символов */
+  /* ** *8353 */ 
+const card = '2342834503458353'
+console.log(card.slice(-4).padStart(card.length, '*'))
