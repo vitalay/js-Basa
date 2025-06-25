@@ -6,3 +6,8 @@ console.log(firstName);
 console.log(Name);
 const arr = ['Ты', 'не', 'сказал']
 console.log(arr.join(' '));
+
+const film = 'Звёздные Воины'
+console.log(film.padStart(50, '*'))
+console.log(film.padEnd(50, '*'))
+console.log(film.repeat(10))
