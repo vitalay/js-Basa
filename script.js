@@ -1,19 +1,27 @@
-const form = 'Вася Пупкин Тимофеевичь'
-console.log(form.split());
-const array = [lastNavt, firstName, Name] = form.split(' ');
-console.log(lastNavt);
-console.log(firstName);
-console.log(Name);
-const arr = ['Ты', 'не', 'сказал']
-console.log(arr.join(' '));
-
-const film = 'Звёздные Воины'
-console.log(film.padStart(50, '*'))
-console.log(film.padEnd(50, '*'))
-console.log(film.repeat(10))
 
 
-  /* Замаскировать всё, кроме последних 4х символов */
-  /* ** *8353 */ 
-const card = '2342834503458353'
-console.log(card.slice(-4).padStart(card.length, '*'))
+
+// const user = ['Вася', 'Пупкин', 25]
+const user = {
+  name: 'Вася',
+  surname: 'Пупкин',
+  age: 24,
+  skills: [
+    ' Программирование',
+    ' Готовка'
+  ],
+    eduBasic: 'Школа 10',
+      eduPro: 'МФТИ'
+}
+console.log(user.city);
+console.log(user.skills);
+console.log(user['skills']); 
+const level = 'Pro'
+console.log(user['edu' + level]);
+// const res = prompt ('Введите свойство');
+user.city = 'Москва';
+user['city'] = 'Москва';
+console.log(user.city);
+user.age = 30;
+user['age'] = 30;
+console.log(user)
