@@ -56,3 +56,25 @@ console.log(wallet.decrease(500, 'Покупка телефон'));
 console.log(wallet.get0perationLenght());
 console.log(wallet.balance);
 console.log(wallet.operations);
+
+
+const cities = {
+  msk: {
+    let: 200,
+    temp: 25
+  },
+  spb: {
+    It: 100,
+    temp: 20
+  }
+}
+let sumTemp = 0;
+let citiesCount = Object.keys(cities).length;
+// for (const key in cities) {
+// sumTemp += cities[key].temp;
+//}
+// console.log(sumTemp / citiesCount);
+for (const key of Object.keys(cities)) {
+  sumTemp += cities[key].temp;
+}
+console.log(sumTemp / citiesCount);
