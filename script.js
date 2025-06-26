@@ -78,3 +78,13 @@ for (const key of Object.keys(cities)) {
   sumTemp += cities[key].temp;
 }
 console.log(sumTemp / citiesCount);
+
+
+const user = {
+  name: 'Вася',
+  age: 40,
+  city: 'Moscow'
+}
+const { age, ...userWithouAge } = user;
+console.log(age);
+console.log(userWithouAge);
