@@ -80,7 +80,7 @@ for (const key of Object.keys(cities)) {
 console.log(sumTemp / citiesCount);
 
 
-const user = {
+let user = {
   name: 'Вася',
   age: 40,
   city: 'Moscow'
@@ -88,3 +88,13 @@ const user = {
 const { age, ...userWithouAge } = user;
 console.log(age);
 console.log(userWithouAge);
+
+const additionalData = {
+  skills: ['Разработка', 'Дизайн'],
+  creditCard: '2342-2345-2734-2356'
+};
+  user = {
+...user,
+...additionalData
+  }
+console.log(user);
