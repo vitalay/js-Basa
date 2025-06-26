@@ -98,3 +98,17 @@ const additionalData = {
 ...additionalData
   }
 console.log(user);
+
+const cities1 = {
+  msk: {
+    temp: {
+      celcius: 25
+    }
+  },
+spb: {
+  }
+}
+const city = 'msk'
+if (cities1[city] != undefined && cities1[city].temp != undefined)
+  console.log(cities1[city].temp.celcius);
+console.log(cities1[city]?.temp?.celcius);
