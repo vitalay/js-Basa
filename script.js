@@ -1,29 +1,24 @@
 
-
-const sum = 1
-console.log(sum);
-function sum2 (n) {
-  n = n + 1
-  if (n > 100) {
-    return n
-  }
-  console.log(n);
-  return sum2(n)
-}
-
-sum2(sum);
-
+'use strict';
+let successMessage = 'Успех';
 const user = {
-  name: 'Anton',
-  id: 1
-
+  name: 'Вася',
+  roles: [],
 }
-const user2 = {
-  ...user
-}
-user.name = 'Vasilisa'
-user.id = 2
-
-console.log(user);
-console.log(user2);
+ function addRole(user, role) {
+    if (role == 'admin') {
+  const message = 'Ошибка';
+  console.log(message);
+  return user;
+    }
+  user.roles.push(role);
+   successMessage = 'Успешно';
+  console.log(successMessage);
+  function logRoles() {
+    console.log(user.roles)     
+  }
+  logRoles()
+    return user;
+  }
+    console.log(addRole(user, 'dev'))
  
