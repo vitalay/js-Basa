@@ -1,34 +1,28 @@
 
 'use strict';
 
-function addNum(num1, num2){
-    console.log(this);
-  return num1 + num2;
-}
-
-const addNum2 = (num1, num2) =>{
-   
-    return num1 + num2;
-}
-
 const user = {
-   name: 'John',
-    surname: 'Fifi' ,
-  
-    getFullName: function(){
-  
-        return this.name + ' ' + this.surname;
-    }
-  
-  };
-console.log(user.getFullName());
+  firstName: 'Vasy',
+  lastName: 'Vasilievich',
+  age: 15,
+  addUserInfo: function () {
+    console.log(`${this.firstName}  ${this.lastName}`);
 
-user.getFullName();
+    const canDrink = () => {
+      if (this.age >=  18) {
+        console.log('Может Пить');
+      } else {
+        console.log('Не может пить ');
+      }
+ 
+    } 
+    canDrink()
+  },
 
-const user2 = {
-  name: 'Марина',
-  surname: 'Катц'
- } ;
-  user2.getFullName = user.getFullName;
-  user2.getFullName() ;
-  const getFullName = user2.getFUllName;
+  addUserInfoArro: () => {
+    console.log(`${this.firstName}  ${this.lastName}`);
+  }
+}
+
+user.addUserInfo()
+user.addUserInfoArro() 
