@@ -1,24 +1,34 @@
 
 'use strict';
-let successMessage = 'Успех';
-const user = {
-  name: 'Вася',
-  roles: [],
+
+function addNum(num1, num2){
+    console.log(this);
+  return num1 + num2;
 }
- function addRole(user, role) {
-    if (role == 'admin') {
-  const message = 'Ошибка';
-  console.log(message);
-  return user;
+
+const addNum2 = (num1, num2) =>{
+   
+    return num1 + num2;
+}
+
+const user = {
+   name: 'John',
+    surname: 'Fifi' ,
+  
+    getFullName: function(){
+  
+        return this.name + ' ' + this.surname;
     }
-  user.roles.push(role);
-   successMessage = 'Успешно';
-  console.log(successMessage);
-  function logRoles() {
-    console.log(user.roles)     
-  }
-  logRoles()
-    return user;
-  }
-    console.log(addRole(user, 'dev'))
- 
+  
+  };
+console.log(user.getFullName());
+
+user.getFullName();
+
+const user2 = {
+  name: 'Марина',
+  surname: 'Катц'
+ } ;
+  user2.getFullName = user.getFullName;
+  user2.getFullName() ;
+  const getFullName = user2.getFUllName;
