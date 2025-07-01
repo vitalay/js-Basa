@@ -20,6 +20,9 @@ function submitForm(){
   }
   document.querySelector('.panel').innerText = input
   document.querySelector('.input').value = ''
+  // document.querySelector('.notification').style.display = 'block'
+  // document.quervSelector(' notification').classList.add('notification_activ')
+ document.querySelector('.notification').classList.remove('notification_hidden')
 }
 
 function inputChanged(e) {
