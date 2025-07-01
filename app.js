@@ -13,7 +13,7 @@
 //   document.querySelector('.input').value = ''
 // });
 
-function cengeClick(){
+function submitForm(){
   const input = document.querySelector('.input').value;
   if (!input) {
     return;
@@ -21,3 +21,13 @@ function cengeClick(){
   document.querySelector('.panel').innerText = input
   document.querySelector('.input').value = ''
 }
+
+function inputChanged(e) {
+  if (e.code == 'Enter')
+    submitForm()
+}
+// document.querySelector('.input').addEventListener('keydown', (e) => {
+//   if (e.code == 'Enter') {
+// submitForm()
+// }})
+
