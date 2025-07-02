@@ -23,6 +23,9 @@ function submitForm(){
   // document.querySelector('.notification').style.display = 'block'
   // document.quervSelector(' notification').classList.add('notification_activ')
  document.querySelector('.notification').classList.remove('notification_hidden')
+  console.log(document.querySelector('.notification').getAttribute('class'))
+  document.querySelector('.notification').setAttribute('key', 1);
+document.querySelector('.notification').setAttribute('user-id', 1);
 }
 
 function inputChanged(e) {
