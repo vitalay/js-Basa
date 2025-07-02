@@ -20,9 +20,18 @@ function submitForm(){
   }
   document.querySelector('.panel').innerText = input
   document.querySelector('.input').value = ''
+
   // document.querySelector('.notification').style.display = 'block'
   // document.quervSelector(' notification').classList.add('notification_activ')
  document.querySelector('.notification').classList.remove('notification_hidden')
+
+  const textString = JSON.stringify({
+    text: input
+}) 
+    localStorage.setItem('text', textString);
+
+
+
   console.log(document.querySelector('.notification').getAttribute('class'))
   document.querySelector('.notification').setAttribute('key', 1);
 document.querySelector('.notification').setAttribute('user-id', 1);
@@ -72,4 +81,6 @@ const are = JSON.parse('{"a": 1}')
 console.log(are);
 const are2 = JSON.stringify(are)
 console.log(are2);
+
+
 
