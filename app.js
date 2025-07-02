@@ -36,12 +36,40 @@ function inputChanged(e) {
 //   if (e.code == 'Enter') {
 // submitForm()
 // }})
-console.log(document.querySelectorAll('.one')[0].innerText);
-console.log(document.querySelectorAll('.one')[1].innerText);
+// console.log(document.querySelectorAll('.one')[0].innerText);
+// console.log(document.querySelectorAll('.one')[1].innerText);
 
 
-console.log(document.querySelector('.one span').innerText);
-console.log(document.querySelector('.one ~ div').innerText);
-console.log(document.querySelector('#two').innerText);
-console.log(document.getElementById('two').innerText);
-console.log(document.querySelector('[user-id="4"]').innerText)
+// console.log(document.querySelector('.one span').innerText);
+// console.log(document.querySelector('.one ~ div').innerText);
+// console.log(document.querySelector('#two').innerText);
+// console.log(document.getElementById('two').innerText);
+// console.log(document.querySelector('[user-id="4"]').innerText)
+
+// const panelText = 'Панель';
+// const panelClass = 'button';
+
+// const newElement = document.createElement('div');
+// newElement.setAttribute('user-id', 1);
+// newElement.classList.add('panel');
+
+// newElement.innerHTML = `<button class="${panelClass}">${panelText}</button>`;
+
+// // newElement.innerText = 'Кнопка'; // ❌ Не нужно вместе с innerHTML
+
+// document.querySelector('.test').appendChild(newElement);
+// localStorage.setItem('test', '123')
+// localStorage.setItem('test1', true)
+// localStorage.setItem('test1', '1234')
+
+
+// console.log(localStorage.getItem('test1'));
+// localStorage.removeItem('test');
+// // localStorage.clear();
+// console.log(localStorage.getItem('test1'));
+// console.log(localStorage.getItem('test'));
+const are = JSON.parse('{"a": 1}')
+console.log(are);
+const are2 = JSON.stringify(are)
+console.log(are2);
+
